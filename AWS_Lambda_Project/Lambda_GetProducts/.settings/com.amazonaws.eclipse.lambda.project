@@ -1,0 +1,5 @@
+#Lambda Function Project Metadata
+#Fri Apr 07 15:31:16 IST 2017
+lastDeploymentFunctionName=ProductCompletList
+lastDeploymentBucketName=productdynamo
+lastDeploymentEndpoint=https\://lambda.us-east-1.amazonaws.com/
