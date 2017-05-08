@@ -1,0 +1,7 @@
+#Lambda Function Project Metadata
+#Thu Mar 16 17:55:15 IST 2017
+lastInvokeShowLiveLog=false
+lastDeploymentFunctionName=DeleteProduct
+lastDeploymentBucketName=productdynamo
+lastDeploymentEndpoint=https\://lambda.us-east-1.amazonaws.com/
+lastInvokeInput="DELL09OPVEZ"
