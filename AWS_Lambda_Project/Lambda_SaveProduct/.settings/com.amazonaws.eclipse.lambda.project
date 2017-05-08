@@ -1,0 +1,7 @@
+#Lambda Function Project Metadata
+#Fri Mar 17 16:02:12 IST 2017
+lastInvokeShowLiveLog=false
+lastDeploymentFunctionName=saveProductAPI
+lastDeploymentBucketName=productdynamo
+lastDeploymentEndpoint=https\://lambda.us-east-1.amazonaws.com/
+lastInvokeInput=\    {\r\n      "price"\: "65000",\r\n      "productName"\: "Apple",\r\n      "productID"\: "APPLE123",\r\n      "category"\: "Smart phones",\r\n       "model"\: "2017",\r\n      "quantity"\:"1000"\r\n    }
