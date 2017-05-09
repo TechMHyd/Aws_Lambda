@@ -1,0 +1,52 @@
+<span us-spinner = "{radius:30, width:8, length: 16}" spinner-on="showSpinner" ></span> 
+<div class="formFields">
+    <div class="row">
+        <div>
+            <div class="h3 header">New Product Registration Form</div>
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <br>
+            <form class="form-group" name="productForm">
+                <table>
+                    <tr>
+                        <td class="h5">Product ID:</td>
+                        <td colspan="5"><input type="text" class="form-control" ng-model="productInput.productID" placeholder="Product ID" required></td>
+                    </tr>
+                    <tr>
+                        <td>Product Name:&nbsp </td>
+                        <td><input type="text" class="form-control" ng-model="productInput.productName" placeholder="Product Name" required></td>
+                    </tr>
+                    <tr>
+                        <td>Category:</td>
+                        <td><input type="text" class="form-control" ng-model="productInput.category" placeholder="Category" required></td>
+                    </tr>
+                    <tr>
+                        <td>Price:</td>
+                        <td><input type="number" class="form-control" ng-model="productInput.price" placeholder="price" required></td>
+                    </tr>
+                    <tr>
+                        <td>Quantity:</td>
+                        <td><input type="number" class="form-control" ng-model="productInput.quantity" placeholder="Quantity" required></td>
+                    </tr>
+                    <tr>
+                        <td>Model:</td>
+                        <td><input type="text" class="form-control" ng-model="productInput.model" placeholder="Model" required></td>
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-5"></div>
+        <div class="col-md-7">
+            <button ng-click="savebutton()" class="btn btn-info" ng-disabled ="productForm.$invalid">Insert</button>
+        </div>
+
+    </div>
+
+
+</div>

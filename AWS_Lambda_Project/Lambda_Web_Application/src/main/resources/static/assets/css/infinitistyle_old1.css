@@ -1,0 +1,286 @@
+@import url('responsive_table.css');
+/* ----- general css ------- */
+@font-face{
+	font-family:"InfinitiBrand-Regular";
+	font-weight:normal;
+	font-style:normal;
+	src:url("../fonts/InfinitiBrand-Regular.eot");
+	src:url("../fonts/InfinitiBrand-Regular.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/InfinitiBrand-Regular.woff") format("woff"),
+		url("../fonts/InfinitiBrand-Regular.ttf") format("truetype"),
+		url("../fonts/InfinitiBrand-Regular.svg#InfinitiBrand-Regular") format("svg");
+}
+
+@font-face{
+	font-family:"InfinitiBrand-Bold";
+	font-weight:normal;
+	font-style:normal;
+	src:url("../fonts/InfinitiBrand-Bold.eot");
+	src:url("../fonts/InfinitiBrand-Bold.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/InfinitiBrand-Bold.woff") format("woff"),
+		url("../fonts/InfinitiBrand-Bold.ttf") format("truetype"),
+		url("../fonts/InfinitiBrand-Bold.svg#InfinitiBrand-Bold") format("svg");
+}
+
+@font-face{
+	font-family:"InfinitiBrand-Light";
+	font-weight:normal;
+	font-style:normal;
+	src:url("../fonts/InfinitiBrand-Light.eot");
+	src:url("../fonts/InfinitiBrand-Light.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/InfinitiBrand-Light.woff") format("woff"),
+		url("../fonts/InfinitiBrand-Light.ttf") format("truetype"),
+		url("../fonts/InfinitiBrand-Light.svg#InfinitiBrand-Light") format("svg");
+}
+body {Font-family:"InfinitiBrand-Regular", Helvetica, Arial, sans-serif;-webkit-font-smoothing: subpixel-antialiased; background:url(../img/bg_img.jpg) 100% 0 / cover no-repeat #050506; color:#626262;}
+h2, h3{Font-family:"InfinitiBrand-Regular", Helvetica, Arial, sans-serif; font-size:18px; line-height:21px; color:#383838; margin:0 0 18px;}
+h3{font-size:18px; line-height:26px;}
+a, a:focus{color:#565656;}
+a:hover{text-decoration:underline;color:#565656;}
+a:hover sup, a:hover sub{text-decoration:none;}
+strong, .strong{font-family:"InfinitiBrand-Bold"; font-weight:normal;}
+
+/* ================== icons and logo =============== */
+.navbar-default{background:rgba(11,11,12, .85); border:0; margin:0;}
+.topIcon{display:inline-block; opacity:0.6; border:#FFF 2px solid; margin-top:14px; margin-bottom:14px; width:48px; height:48px; border-radius:100%; text-align:center;}
+.topIcon img {position: relative; width:28px; top: 50%; transform: translateY(-50%);}
+.topIcon:hover, .topIcon:focus{opacity:1;}
+.logoContainer{width:230px; margin:20px auto 0; display:inline-block;}
+.logo{max-width:100%;}
+
+/* ================== search block =============== */
+.mainContainer{padding-top:76px;}
+.searchBlock{background:rgba(255,255,255,.9); padding-top:15px; padding-bottom:15px}
+.searchBlock h2, .loginBox h2{text-transform:uppercase;}
+.searchBlock small, .loginBox small{font-size:11px;display: inline-block;}
+.sqrIcon, .sqrIcon2{width:42px; height:0; padding-top:42px; font-size:0; line-height:normal; text-indent:-9999em; display:inline-block; border:#b6b6b6 1px solid; text-align:center; margin-right:5px; border-radius:100%;}
+.sqrIcon2{margin-right:2px;}
+.sqrIcon:hover, .sqrIcon:focus, .sqrIcon.current{border-color:#555;}
+.sqrIcon.phone{background:url(../img/contact.png) 50% 50% / 24px no-repeat;}
+.sqrIcon.mail{background:url(../img/mail.png) 50% 50% / 24px no-repeat;}
+.sqrIcon.home{background:url(../img/home_gray.png) 50% 50% / 24px no-repeat;}
+.sqrIcon.phone:focus, .sqrIcon.phone.current{background-image:url(../img/contact_white.png); background-color:#555;}
+.sqrIcon.mail:focus, .sqrIcon.mail.current{background-image:url(../img/mail_white.png); background-color:#555;}
+.sqrIcon.home:focus, .sqrIcon.home.current{background-image:url(../img/home_white.png); background-color:#555;}
+.tabContent{display:none;}
+.tabContent.current{display:block;}
+.searchBlock .form-group{margin:0;}
+.form-control{border-radius:0; background:none; box-shadow:inset 0 1px 1px 0 #dadada; padding:6px 6px; height:44px;}
+.form-control:focus{box-shadow:inset 0 1px 1px 0 #dadada;; border-color:#555;}
+.form-group {margin-bottom: 22px;}
+.sqrIcon2.submitBtn{background:url(../img/search_white.png) 50% 50% / 24px no-repeat #555; border:0;}
+.sqrIcon2.barCode{background:url(../img/barcode_white.png) 50% 50% / 24px no-repeat #555; border:0; margin:0;}
+.sqrIcon2.submitBtn:hover, .sqrIcon2.submitBtn:focus, .sqrIcon2.barCode:hover, .sqrIcon2.barCode:focus{background-color:#444;}
+label.error {
+    color: #c71444 !important;
+	}
+.blockListing{list-style-type:none; padding:0; margin:0 -1px;}
+.blockListing li{width:25%; float:left; text-align:center; padding:1px; opacity:0.5; cursor:pointer;}
+.blockListing li:hover{opacity:1;}
+.blockListing li .inner{padding:37px 20px;background:url(../img/spacer.png) 0 0 repeat; }
+.blockListing img{}
+.blockListing h3{font-size:18px; line-height:22px; text-transform:uppercase; color:#FFF; margin:0;}
+.blockListing .icon{width:48px; height:48px; margin:0 auto 21px; display:block; border:#FFF 2px solid; border-radius:100%;}
+.blockListing img {position: relative; width:28px; top: 50%; transform: translateY(-50%);}
+.invalidEmail {color:#c71444 ! important;display:none;font-weight:700 ! important;}
+.inputMask {color:#008000 ! important;font-weight:700 ! important;}
+.invalidPhone {color:#c71444 ! important;display:none;font-weight:700 ! important;}
+.stateRequired {color:#c71444 ! important;display:none;font-weight:700 ! important;}
+.phoneOneRequired {color:#c71444 ! important;display:none;font-weight:700 ! important;}
+.invalidEmailId {color:#c71444 ! important;font-weight:700 ! important;}
+.help-block {display: block! important;color: #c71444 ! important;}
+/* .help-block-new {color: #c71444 ! important;} */
+.invalidPhoneEntry {color:#c71444 ! important;display:none;font-weight:700 ! important;}
+.emptyPhoneEntry {color:#c71444 ! important;display:none;font-weight:700 ! important;}
+
+
+/* ==================== login ================== */
+.loginContainer{position:relative;}
+.loginBox{background:rgba(255,255,255,.9); padding:15px; position:absolute; top: 50%; left:50%; width:600px; margin-top:20px; margin-bottom:20px; margin-left:-300px;}
+.loginBox.largeBox{left:0; margin-left:0; width:100%;}
+.btn{border-radius:0; padding-top:8px; padding-bottom:8px;}
+.btn.fullwidth{width:100%;}
+.btn-default{background:#555; border-color:#555; color:#FFF;}
+.btn-default:hover, .btn-default:focus{background:#444; border-color:#444; color:#FFF;}
+
+/* Checkboxes and Radio buttons */
+input[type=checkbox],
+input[type=radio],.chkbox{
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  vertical-align: middle;
+  z-index: 1;
+  /* Raise above label:before */
+  position: absolute;
+  left: 0;
+}
+	
+input[type=radio] {
+  height: 19px;
+  width: 19px;
+}
+
+/* Use label:before to hold checkbox/radio image */
+input[type=checkbox] ~ label:before,
+input[type=radio] ~ label:after {
+  background: url("../img/sprite_img.png") no-repeat;
+  content: " ";
+  height: 24px;
+  width: 24px;
+}
+
+input[type=radio] ~ label:after {
+  /*height: 19px;
+  width: 19px;*/
+ height: 20px;
+  width: 20px;
+}
+
+.lt-ie9 input[type=checkbox] ~ label:before,
+.lt-ie9 input[type=radio] ~ label:after {
+  display: none;
+}
+
+/* NB. Requires specific element order. */
+input[type=checkbox] ~ label{padding-left:34px; display:inline-block; font-size:13px; line-height:18px; font-weight:normal; color:#000; margin-bottom:0;}
+input[type=checkbox] ~ label > span{display:block;  font-weight:normal; font-size:12px; color:#626262;}
+input[type=checkbox] ~ label:before {
+  background-position: 0 0;
+   padding:0px 0 10px 35px;
+   margin-left:-34px;
+}
+
+input[type=checkbox]:hover ~ label:before,
+input[type=checkbox]:focus ~ label:before {
+  background-position: -37px 0;
+}
+
+input[type=checkbox]:checked ~ label:before {
+  background-position: -74px 0;
+}
+
+input[type=checkbox][disabled] ~ label:before {
+  background-position: -216px 0;
+}
+
+input[type=checkbox][disabled]:checked ~ label:before {
+  background-position: -272px 0;
+}
+
+input[type=radio] + label:after {
+  /*background-position: -48px -31px;*/
+    background-position: -34px -36px;
+  /*padding:0 0 3px 27px;
+padding:0 0 4px 27px;*/
+padding:4px 0 16px 27px;
+}
+
+input[type=radio]:hover + label:after,
+input[type=radio]:focus + label:after {
+  background-position: -34px -36px;
+}
+
+input[type=radio]:checked + label:after {
+  background-position: -64px -36px;
+}
+
+input[type=radio][disabled] + label:after {
+  background-position: -207px -31px;
+}
+
+input[type=radio][disabled]:checked + label:before {
+  background-position: -260px -31px;
+}
+
+input[type=radio].cus{ left:16px; top:-7px; cursor:pointer; margin-left:10px;}
+
+.form-field-confirmation .controls{position:relative;}
+
+/* ================= table ================ */
+.form-vertical label{font-weight:normal;}
+
+/* ================ custom selectbox ================= */
+
+.input-validation-error{
+	/*border:1px solid rgba(142, 0, 28, 0.6)!important;*/
+	border:1px solid #c00!important;
+	}
+
+.validation-summary-errors {
+    /*background-color: #180004;*/
+    border: 1px solid #fc4123;
+    color: #fc4123;
+    text-transform: uppercase;
+	text-align:left;
+	margin:0 15px 20px;
+	padding:10px;
+}
+
+/***dropdown******/
+.styled-selectInner {
+  height: 34px;
+/*border-radius:4px;*/
+}
+
+.styled-select {      
+  height: 44px;
+  width:100%;  
+  outline: none;    
+  background:url(../img/select-arrow.png) right center no-repeat;
+  *zoom: 1; 
+  /* In IE, elements must have layout for filters to apply */
+  -moz-background-clip: padding;
+  /* Firefox 3.6 */
+  -webkit-background-clip: padding;
+  /* Safari 4? Chrome 6? */
+  background-clip: padding-box;
+  display: block;  
+  /*padding:5px 5px 5px 15px;*/
+  padding:10px 16px 10px 6px;
+  position:absolute;
+  left:0;
+  top:0;
+}
+
+.styled-selectInner{
+	white-space:nowrap;
+	}
+
+.selectWrap{position:relative; overflow:hidden;}
+select.select{z-index:100;}
+	.select{	
+	
+	width:calc(100%)!important;
+}
+
+.input-validation-error + .styled-select{border-color: #c00!important;}
+
+.createFormChkbox input[type="checkbox"] ~ label::before{padding:4px 0 6px 35px;}
+.createFormChkbox .form-field-confirmation .controls{margin-top:12px;}
+.saveBtn .fa{font-size:18px; margin-right:8px;}
+
+
+/* ============= media queries ================= */
+@media (min-width:768px){
+	.searchBlock small{margin-top:7px;}
+	.noPadding{padding-left:2px!important; padding-right:2px!important;}
+	.noPadding.first{padding-left:0!important;}
+	.createFormChkbox .col-sm-2{width:auto ;}
+}
+@media (max-width:767px){	
+.logoContainer{width:186px;}
+.topIcon{width:38px; height:38px;}
+.topIcon img{width:18px;}
+.tablet{text-align:center; margin:15px auto;}
+.searchBlock .form-control{margin-bottom:5px;}
+.multifield{margin-left:-15px; margin-right:-15px;}
+ .tabContent{margin-bottom:22px;}
+ .sqrIcon2.submitBtn{text-indent:0; padding-top:0; height:42px; color:#fff; width:48%; float:left; font-size:15px; background-position:92% 50%;}
+ .sqrIcon2.barCode{width:48%; float:right;}
+ .blockListing li{width:50%;}
+ .blockListing h3{font-size:16px;}
+ .blockListing li .inner{padding-left:5px; padding-right:5px;}
+ .loginBox{left:5%; margin-left:0; width:90%;}
+ .sqrIcon2{border-radius:30px;}
+}

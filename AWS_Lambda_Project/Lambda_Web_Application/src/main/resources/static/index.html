@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html data-ng-app="aws">
+
+<head>
+    <title>AWS-Demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <!--  <link rel="shortcut icon" href="assets/img/favicon1.ico"> -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+  <!--   <link href="assets/css/infinitistyle.css" rel="stylesheet"> -->
+    <link href="assets/css/responsive_table.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+ <script src="lib/angular.min.js"></script>
+    <script src="lib/ui-rout.js"></script>
+    <script src="lib/spin.min.js"></script>
+    <script src="lib/angular-spinner.min.js"></script>
+    
+<!--    <script src="app/components/angular.min.js"></script>-->
+    <script src="app/components/angular-animate.js"></script>
+    <script src="app/components/angular-touch.min.js"></script>
+    <script src="app/components/angular-sanitize.js"></script>
+    <script src="app/components/ui-bootstrap-tpls-2.0.2.min.js"></script>
+    <script src="app/components/angular-route.js"></script>
+    <script src="app/components/ngStorage.js"></script>
+    <script src="app/components/angular-ui-router.min.js"></script>
+    <script src="app/components/mask.min.js"></script>
+    <!--/End:: Angular dependencies-->
+
+    <!--Start:: Cognito dependencies-->
+    <script src="app/components/aws-cognito-sdk.js"></script>
+    <script src="app/components/amazon-cognito-identity.min.js"></script>
+    <script src="app/components/aws-sdk.js"></script>
+    <!--End:: Cognito dependencies-->
+
+
+    <!--Start:: Controllers and Services-->
+    <script src="app/app.js"></script>
+    <script src="controller/loginController.js"></script>
+    <script src="controller/product-search.controller.js"></script>
+    <script src="controller/product-delete.controller.js"></script>
+    <script src="controller/products-home.controller.js"></script>
+    <script src="controller/saveProductsController.js"></script>
+    <script src="controller/products-completlist.controller.js"></script>
+    <script src="controller/product-update.controller.js"></script>
+    <script src="controller/userRegisterController.js"></script>
+   
+   
+    <script src="service/Delete-ProductService.js"></script>
+    <script src="service/saveProductService.js"></script>
+    <script src="service/products-list-search.service.js"></script>
+    <script src="service/updateProductService.js"></script>
+    <script src="service/products-full-list.service.js"></script>
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div ui-view >
+        </div>
+    </div>
+    <div id="footer" class="row fixed-bottom">
+        <h5 align=center>&copy;2016 Tech Mahindra Limited. All rights reserved</h5> </div>
+</body>
+
+</html>

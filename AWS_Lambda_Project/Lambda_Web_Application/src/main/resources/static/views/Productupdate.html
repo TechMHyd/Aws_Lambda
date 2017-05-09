@@ -1,0 +1,53 @@
+<span us-spinner = "{radius:30, width:8, length: 16}" spinner-on="showSpinner" ></span> 
+<h3 class="text-center"> Update Existing Product Details</h3>
+<div class="row">
+
+	<div class="col-md-5">
+		<!-- <span>A</span><br> <span>B</span><br> <span>C</span><br>
+		<span>D</span><br> <span>F</span><br> -->
+	</div>
+	<div class="col-md-3">
+		<br>
+		 <form class="form-group">
+                <table>
+                    <tr>
+                        <td class="h5">Product ID:</td>
+                        <td colspan="5"><input type="text" ng-disabled = "lookedup" class="form-control" ng-model="productInput.productID" placeholder="Product ID"></td>
+                        <td></td><td> <button class= "btn  btn-info" ng-click = "lookupProduct()">Look up</button></td>
+                    </tr>
+                    <tr>
+                        <td>Product Name:&nbsp </td>
+                        <td><input type="text" class="form-control" ng-model="productInput.productName" placeholder="Product Name"></td>
+                    </tr>
+                    <tr>
+                        <td>Category:</td>
+                        <td><input type="text" class="form-control" ng-model="productInput.category" placeholder="Category"></td>
+                    </tr>
+                    <tr>
+                        <td>Price:</td>
+                        <td><input type="text" class="form-control" ng-model="productInput.price" placeholder="price"></td>
+                    </tr>
+                    <tr>
+                        <td>Quantity:</td>
+                        <td><input type="text" class="form-control" ng-model="productInput.quantity" placeholder="Quantity"></td>
+                    </tr>
+                    <tr>
+                        <td>Model:</td>
+                        <td><input type="text" class="form-control" ng-model="productInput.model" placeholder="Model"></td>
+                    </tr>
+
+                </table>
+            </form>
+	</div>
+	<div class="col-md-4"></div>
+</div>
+
+<div class="row">
+    <div class="col-md-5"></div>
+    <div class="col-md-7"><button ng-click="updatebutton()" class="btn btn-info">update</button></div>
+    
+</div>    
+    
+</div>
+
+

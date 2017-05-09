@@ -1,0 +1,59 @@
+<span us-spinner = "{radius:30, width:8, length: 16}" spinner-on="showSpinner" ></span> 
+
+<div class="row">
+	<h3 class="text-center">Search for the Existing Product</h3>
+	<form name="searchForm">
+		<div class="row" ng-init="loadPage()">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<div class="input-group">
+					<input ng-model="productID" type="text" class="form-control"
+						placeholder="Enter Product ID" required>
+					<div class="input-group-btn">
+						<button class="btn btn-default" ng-click="searchProduct()"
+							type="submit">
+							<i class="glyphicon glyphicon-search"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+		
+		<div class="row"
+			ng-if="searchResult.length !== 0 && searchResult !== 'start' ">
+			<div class="col-md-12">
+				<table class="table table-bordered">
+					<tr>
+						<th>Product ID</th>
+						<th>Product Name</th>
+						<th>Product Price</th>
+					    <th>Product Model</th>
+						<th>product Category</th>
+						<th>Product Quantity</th>
+					</tr>
+					<tr>
+						<td>{{searchResult[0].productID.s}}</td>
+						<td>{{searchResult[0].productName.s}}</td>
+						<td>{{searchResult[0].Price.n}}</td>
+						<td>{{searchResult[0].productModel.s}}</td>
+						<td>{{searchResult[0].Category.s}}</td>
+						<td>{{searchResult[0].Quantity.n}}</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		
+		<div class="row"
+			ng-if="searchResult.length === 0 && searchResult !== 'start' ">
+			<center>
+				<h4 class="text-danger">No record Found with the Given
+					ProductID.</h4>
+			</center>
+		</div>
+
+	</form>
+</div>
+
+
+

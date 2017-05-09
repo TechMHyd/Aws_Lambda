@@ -1,0 +1,24 @@
+<span us-spinner = "{radius:30, width:8, length: 16}" spinner-on="showSpinner" ></span> 
+
+<div ng-init="loadData()" class="row">
+	<div class="col-md-12">
+		<table class="table table-bordered">
+			<tr>
+				<th>Product ID</th>
+				<th>Product Name</th>
+				<th>Product Price</th>
+				<th>Product Model</th>
+				<th>product Category</th>
+				<th>Product Quantity</th>
+			</tr>
+			<tr ng-repeat="Product in productsList">
+				<td>{{Product.productID.s}}</td>
+				<td>{{Product.productName.s}}</td>
+				<td>{{Product.Price.n}}</td>
+				<td>{{Product.productModel.s}}</td>
+				<td>{{Product.Category.s}}</td>
+				<td>{{Product.Quantity.n}}</td>
+			</tr>
+		</table>
+	</div>
+</div>

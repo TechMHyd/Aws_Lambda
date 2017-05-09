@@ -1,0 +1,82 @@
+<span us-spinner="{radius:30, width:8, length: 16}"
+	spinner-on="showSpinner"></span>
+<div id="header">
+	<div class="container">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target="#myNavbar">
+						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><b>Amazon Web Services</b></a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a ui-sref="login" style="font-weight: bold">Login</a></li>
+						<li><a ui-sref="register" style="font-weight: bold">Register</a>
+						</li>
+					</ul>
+				</div>
+
+
+			</div>
+		</nav>
+	</div>
+</div>
+
+<div class="container mainContainer" data-ng-init="init()">
+	<!-- login box -->
+	<div class="loginContainer">
+		<div class="loginBox">
+			<div class="row">
+				<div class="col-sm-8">
+					<h2 id="login">Login Form</h2>
+				</div>
+				<div class="col-sm-4 text-right">
+					<small>*Required</small>
+				</div>
+			</div>
+
+			<div ng-show='errorFlag' class="alert alert-danger "><strong>Login error!</strong>Please
+				Provide valid User Credentials.
+			</div>
+
+			<form name="login" id="loginForm" novalidate>
+				<div class="form-group">
+					<input class="form-control" id="userId" name="userId"
+						placeholder="Username" type="text" ng-model="userId" required />
+				</div>
+
+				<div class="form-group">
+					<input type="password" class="form-control" id="password"
+						name="password" placeholder="Password" ng-model="password"
+						required />
+				</div>
+				
+			<!-- 	<div class="form-group">
+					<input type="text" class="form-control" id="role"
+						name="role" placeholder="Enter Role" ng-model="role" required />
+				</div> -->
+				 
+			   <div class="form-group"> Select Role : 
+ 					 <label class="radio-inline"><input type="radio" name="role" ng-model="role" value ="admin">Admin</label>
+  					 <label class="radio-inline"><input type="radio" name="role" ng-model="role" value= "user">User</label>
+				</div> 
+				
+
+				<!-- <p><a href="#">Forgot Password?</a></p> -->
+				<div class="row form-group">
+					<div class="col-xs-12 col-sm-5">
+						<button class="btn btn-default fullwidth" type="submit"
+							ng-click="validateUser()">LogIn</button>
+					</div>
+				</div>
+
+			</form>
+		</div>
+	</div>
+	<!-- /login box -->
+
+</div>

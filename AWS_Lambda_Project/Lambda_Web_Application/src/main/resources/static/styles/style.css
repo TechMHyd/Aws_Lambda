@@ -1,0 +1,89 @@
+.navbar-default {
+    background:#777;
+    margin-bottom: -20px;
+    border-radius: 0;
+    background-color: #485563;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #485563;
+    color: white;
+    width: 110%
+}
+
+#logo {
+    text-align: center;
+}
+
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+    background-color: mediumaquamarine;
+    overflow-x: hidden;
+}
+
+.homeimg {
+    margin-top: 10%;
+    margin-left: 7%;
+}
+.mainContainer{
+    top: 15%;
+    margin-top: 15%;
+}
+
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+table {
+    border-spacing: 32px;
+    border-collapse: collapse;
+    margin-top: 2%;
+    border: 1px;
+    margin-bottom: 2%;
+}
+
+img {
+    border: 0;
+    width: 50%;
+    margin-left: 25%;
+}
+
+input [type=text]{
+    margin-bottom: 5px;
+    width:150%
+}
+input [type=password]{
+    margin-bottom: 5px;
+    width:150%
+}
+input [type=number]{
+    margin-bottom: 5px;
+    width:150%
+}
+
+
+.header {
+    margin-left: 34%;
+}
+
+.loginContainer{position:relative;}
+.loginBox{background:rgba(255,255,255,.8); padding:15px; position:absolute; top: 0%; left:50%; border: 25px;border-radius: 0px; width:600px;  margin-top: -100px; margin-left:-300px;}
+.loginBox.largeBox{left:0; margin;15px; width:100%;}
+.btn{border-radius:0; padding-top:8px; padding-bottom:8px;}
+.btn.fullwidth{width:100%;margin-left: 86%;background-color: #555;color:aliceblue}
+.btn-default{background:#555; border-color:#555; color:#FFF;}
+.btn-default:hover, .btn-default:focus{background:#444; border-color:#444; color:#FFF;}
+
+.btn-small{background:#242424; border-color:#515151; color:#FFF; padding-bottom: 4px; padding-top: 4px;}
+.btn-small:hover, .btn-small:focus{background:#1a1a1a; border-color:#575757; color:#FFF;}
+.btn-small .fa{margin-right:3px;}
+
